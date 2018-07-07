@@ -19,9 +19,13 @@ class ControllerCommand {
         $template = str_replace('default', $this->name, $template);
         $template = str_replace('Default', ucfirst($this->name), $template);
 
+        if (is_file(self::DIR . ucfirst($this->name). 'Controller.php')) {
+            echo 'Esse controller já existe!';
+            exit;
+        }
+
         $file = fopen(self::DIR . ucfirst($this->name). 'Controller.php', 'w');
         fwrite($file, $template);
         fclose($file);
-
     }
 }
