@@ -1,6 +1,12 @@
 <?php
 namespace console\Model;
 
-interface CommandInterface {
+interface CommandModel {
+
+    public function command();
+
+    public function messageReturn();
+
+    public function args($args = null);
 
 }

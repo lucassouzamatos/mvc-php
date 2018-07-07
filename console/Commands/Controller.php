@@ -1,20 +1,24 @@
 <?php
+namespace console\Commands;
 
-namespace console;
+use console\Model\AbstractCommand;
 
-class ControllerCommand {
-
+class Controller extends AbstractCommand {
     const DIR = 'src/Controller/';
     const TEMPLATE = 'console/Templates/DefaultController.php';
 
     const MESSAGE_CONTROLLER_EXIST = PHP_EOL . 'Esse controller já existe!';
+    const MESSAGE_CONTROLLER_SUCCESS = PHP_EOL . 'Controller %s criado com sucesso!';
 
     const DIR_ROUTES = 'config/routes.json';
 
     private $name;
 
-    public function __construct($name) {
-        $this->name = $name;
+    public function args($args = null) {
+        $this->name = $args[0];
+    }
+
+    public function command() {
         $this->createTemplate();
         $this->addControllerToRoutes();
     }
@@ -25,13 +29,15 @@ class ControllerCommand {
         $template = str_replace('Default', ucfirst($this->name), $template);
 
         if (is_file(self::DIR . ucfirst($this->name). 'Controller.php')) {
-            echo self::MESSAGE_CONTROLLER_EXIST;
-            exit;
+            $this->message = self::MESSAGE_CONTROLLER_EXIST;
+            return;
         }
 
         $file = fopen(self::DIR . ucfirst($this->name). 'Controller.php', 'w');
         fwrite($file, $template);
         fclose($file);
+
+        $this->message = sprintf(self::MESSAGE_CONTROLLER_SUCCESS, $this->name);
     }
 
     private function addControllerToRoutes() {

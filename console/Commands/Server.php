@@ -1,12 +1,15 @@
 <?php
-namespace console;
+namespace console\Commands;
 
-class ServerCommand {
+use console\Model\AbstractCommand;
 
-    public function init() {
+class Server extends AbstractCommand {
+
+    public function command() {
         echo PHP_EOL . 'Servidor iniciado em localhost:8000';
         exec('php -S localhost:8000 -t ./');
-        exit;
     }
 
+    public function args($args = null) {
+    }
 }
