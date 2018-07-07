@@ -1,0 +1,6 @@
+{
+  "core\\Route\\Router": {
+    "annotationClass":"core\\Annotations\\Annotations",
+    "jsonReader":"core\\FileSystem\\JsonReader"
+  }
+}

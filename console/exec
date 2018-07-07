@@ -1,0 +1,25 @@
+<?php
+
+require_once "../autoload.php";
+$commander = new \console\Commander();
+
+echo "  _____  ____    _  __   ____  ____    __    ____        ____   ___    ___    __  ___   ____  _      __  ____    ___    __ __
+       / ___/ / __ \  / |/ /  / __/ / __ \  / /   / __/       / __/  / _ \  / _ |  /  |/  /  / __/ | | /| / / / __ \  / _ \  / //_/
+      / /__  / /_/ / /    /  _\ \  / /_/ / / /__ / _/        / _/   / , _/ / __ | / /|_/ /  / _/   | |/ |/ / / /_/ / / , _/ / ,<
+      \___/  \____/ /_/|_/  /___/  \____/ /____//___/       /_/    /_/|_| /_/ |_|/_/  /_/  /___/   |__/|__/  \____/ /_/|_| /_/|_|
+                                                                                                                                   ";
+
+
+switch ($argv[1]) {
+    case "help":
+        echo PHP_EOL . "create:controller ~ Criar controller";
+        break;
+
+    case "create:controller":
+        $commander->createController($argv[2]);
+        echo PHP_EOL . "Controller criado com sucesso!";
+        break;
+
+    default:
+        echo PHP_EOL . 'O comando' . $argv[1] . ' não existe!';
+}
