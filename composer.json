@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "7"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "": "core/",
+            "src\\" : "src/",
+            "console\\" : "console/"
+        }
+    }
+}

@@ -16,9 +16,9 @@ class Annotations {
         $arr = new \stdClass();
 
         $refClass = new \ReflectionClass($class);
-
         $arr->name = $class;
         $arr->isClass = true;
+
         $arr->value = $this->getValue($refClass, $annotation);
         $results[] = $arr;
 
@@ -31,7 +31,6 @@ class Annotations {
 
             $results[] = $arr;
         }
-
         return $results;
     }
 
@@ -42,7 +41,12 @@ class Annotations {
      */
     private function getValue($refClass, $annotation) {
         preg_match_all('/\(+(.*?)\)/', $refClass->getDocComment(), $resultado);
-        return str_replace($annotation . '=', '', $resultado[1][0]);
+
+        if(isset($resultado[1][0])) {
+            return str_replace($annotation . '=', '', $resultado[1][0]);
+        }
+
+        return null;
     }
 
 }

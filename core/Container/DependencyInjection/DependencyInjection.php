@@ -16,4 +16,16 @@ class DependencyInjection extends DependencyInjectionModel {
 
         return new $class(...$this->instances);
     }
+
+    /**
+     * @param $filename
+     * @throws \Exception
+     */
+    public function setFileServices($filename) {
+        if (is_file($filename)) {
+            $this->fileServices = $filename;
+        } else {
+            throw new \Exception('O diretório de configurações ' . $filename . ' é inexistente!');
+        }
+    }
 }

@@ -1,0 +1,5 @@
+{
+  "tests\\Helpers\\ServiceOne" : {
+    "ServiceTwo" : "tests\\Helpers\\ServiceTwo"
+  }
+}

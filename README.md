@@ -1,10 +1,14 @@
+# Install
+Comece com
+> composer install
+
 # Usage
 
 Acessando o console:
 > php console/exec
 
 
-# Controller
+### Controller
 Os controllers são responsáveis por "comandar" o back-end das páginas e são 
 armazenados em 'src/Controller'.
 
@@ -22,7 +26,7 @@ quem especificam o caminho da página.
         // seu código aqui
     }
 
-# Serviços
+### Serviços
 É possível acessar seus serviços a partir de qualquer controller.
 Um serviço é uma classe que pode ser chamada de qualquer controller.
 
@@ -52,7 +56,7 @@ No seu serviço, basta chamar a dependência via construtor:
         }
     }      
 
-# Views
+### Views
 Para fazer a renderização das views, o controller já possui uma função extendida, 
 basta então chamá-la da seguinte forma:
       
@@ -62,7 +66,7 @@ Para a renderização as views precisam ser armazenadas na pasta 'src/View',
 e não é necessário adicionar a extensão do arquivo, ficando assim a critério do desenvolvedor
 optar por algo como "index.php" ou "index".
 
-# Logger
+### Logger
 Em DefaultController é possível ver uma demonstração desse serviço
 que até então seria usado internamente.
     

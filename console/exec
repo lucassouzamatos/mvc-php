@@ -1,6 +1,6 @@
 <?php
 
-require_once "autoload.php";
+require_once "vendor/autoload.php";
 use console\Commander;
 
 echo "  _____  ____    _  __   ____  ____    __    ____        ____   ___    ___    __  ___   ____  _      __  ____    ___    __ __
