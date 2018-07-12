@@ -1,3 +1,6 @@
 {
-  "src/Services/MessageService" : {}
+  "src/Services/MessageService" : {},
+  "Assert/Assert" : {
+    "JsonReader" : "FileSystem\\JsonReader"
+  }
 }

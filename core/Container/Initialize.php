@@ -1,7 +1,7 @@
 <?php
-namespace core\Container;
+namespace Container;
 
-use core\Container\DependencyInjection\DependencyInjectionContainer;
+use Container\DependencyInjection\DependencyInjectionContainer;
 
 class Initialize {
     private $dependencyInjection;

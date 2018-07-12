@@ -1,5 +1,5 @@
 <?php
-namespace core\FileSystem;
+namespace FileSystem;
 
 class JsonReader implements FileReader {
 

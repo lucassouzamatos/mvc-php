@@ -1,8 +1,8 @@
 <?php
-namespace core\Route;
+namespace Route;
 
-use core\Annotations\Annotations;
-use core\FileSystem\JsonReader;
+use Annotations\Annotations;
+use FileSystem\JsonReader;
 
 class Router {
 

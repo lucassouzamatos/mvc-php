@@ -1,5 +1,5 @@
 <?php
-namespace core\Container\DependencyInjection;
+namespace Container\DependencyInjection;
 
 abstract class DependencyInjectionModel {
     protected $fileServices;

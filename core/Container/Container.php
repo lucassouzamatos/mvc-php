@@ -1,7 +1,7 @@
 <?php
-namespace core\Container;
+namespace Container;
 
-use core\Container\DependencyInjection\DependencyInjection;
+use Container\DependencyInjection\DependencyInjection;
 
 class Container {
     public function getService($class) {

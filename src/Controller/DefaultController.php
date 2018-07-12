@@ -1,13 +1,13 @@
 <?php
 namespace src\Controller;
 
-use core\Controller\Controller;
+use Controller\Controller;
 use src\Services\MessageService;
 
 class DefaultController extends Controller {
 
     /**
-     * (Route=/default)
+     * (Route=/)
      * (View="View/index.html)
      */
     public function indexAction()
@@ -16,6 +16,4 @@ class DefaultController extends Controller {
         $messageService = $this->getService("src/Services/MessageService");
         $messageService->setMessage(MessageService::ERROR, 'testando serviço...');
     }
-
-
 }

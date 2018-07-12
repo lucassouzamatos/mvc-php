@@ -7,5 +7,9 @@
     "dbname" : "default",
     "user" : "root",
     "password" : "root"
+  },
+
+  "asserts": {
+    "default" : "src/View/public"
   }
 }

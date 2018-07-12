@@ -1,7 +1,7 @@
 <?php
-namespace core\Controller;
+namespace Controller;
 
-use core\Container\Container;
+use Container\Container;
 
 class Controller {
     private $container;

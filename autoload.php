@@ -1,4 +1,8 @@
 <?php
 spl_autoload_register(function($class) {
-    require_once $class . '.php';
+    if (is_file('core/' . $class . '.php')) {
+        require_once 'core/' . $class . '.php';
+    } else {
+        require_once $class . '.php';
+    }
 });

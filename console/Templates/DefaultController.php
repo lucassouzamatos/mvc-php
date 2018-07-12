@@ -1,7 +1,7 @@
 <?php
 namespace src\Controller;
 
-use core\Controller\Controller;
+use Controller\Controller;
 
 class DefaultController extends Controller {
 

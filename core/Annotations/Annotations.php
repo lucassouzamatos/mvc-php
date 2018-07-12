@@ -1,6 +1,6 @@
 <?php
 
-namespace core\Annotations;
+namespace Annotations;
 
 class Annotations {
 

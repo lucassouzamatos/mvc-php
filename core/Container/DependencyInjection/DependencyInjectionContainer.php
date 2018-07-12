@@ -1,6 +1,12 @@
 <?php
-namespace core\Container\DependencyInjection;
+namespace Container\DependencyInjection;
 
+/**
+ * Class DependencyInjectionContainer
+ * @package Container\DependencyInjection
+ *
+ * Inicia com o container, sendo responsável por iniciar todos os services
+ */
 class DependencyInjectionContainer extends DependencyInjectionModel {
 
     public function __construct() {
