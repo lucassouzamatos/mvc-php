@@ -7,7 +7,7 @@ class DefaultController extends Controller {
 
     /**
      * (Route=/default)
-     * (View="View/index.html)
+     * (View="View/index.php)
      */
     public function indexAction()
     {
